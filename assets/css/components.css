@@ -1,0 +1,52 @@
+/* ================= BUTTONS ================= */
+.btn {
+  padding: 0.9rem 2rem;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.btn-outline {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-outline:hover {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.btn-filled {
+  background: var(--primary-color);
+  color: var(--white);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-filled:hover {
+  background: transparent;
+  color: var(--primary-color);
+}
+
+/* ================= ANIMATIONS ================= */
+.animate {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-left {
+  transform: translateX(-3rem);
+}
+
+.animate-right {
+  transform: translateX(3rem);
+}
+
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.4s; }

@@ -1,0 +1,30 @@
+/* ================= ROOT VARIABLES ================= */
+:root {
+  --primary-color: #c4161c;
+  --white: #ffffff;
+  --text-dark: #111111;
+  --text-muted: #666666;
+  --font-heading: "Feredo", serif;
+  --font-body: "Raleway", sans-serif;
+  --transition: all 0.4s ease;
+}
+
+/* ================= RESET ================= */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--white);
+  color: var(--text-dark);
+  line-height: 1.6;
+}

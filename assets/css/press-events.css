@@ -222,6 +222,20 @@
     margin-bottom: 3rem;
 }
 
+.d24d-event-date {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  padding: 0.5rem 0.7rem;
+  text-transform: uppercase;
+}
+
+
+
 /* Grid */
 .d24d-events-grid {
   display: grid;
@@ -241,6 +255,8 @@
 /* Image */
 .d24d-event-image {
   overflow: hidden;
+  position: relative;
+  height: 220px;
 }
 
 .d24d-event-image img {
@@ -282,6 +298,33 @@
   margin-bottom: 0.6rem;
   color: #444;
 }
+
+.d24d-event-readmore {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 1.4rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.d24d-event-readmore span {
+  transition: transform 0.3s ease;
+}
+
+.d24d-event-readmore:hover {
+  border-color: #000;
+}
+
+.d24d-event-readmore:hover span {
+  transform: translateX(4px);
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {

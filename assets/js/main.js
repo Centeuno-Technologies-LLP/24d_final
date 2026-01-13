@@ -110,42 +110,7 @@ document.querySelectorAll(".slider-btn").forEach(button => {
   });
 });
 
-/* ================= Home Projects Auto Slider ================= */
-const projectsTrack = document.querySelector(".home-projects-track");
-const projectsCards = document.querySelectorAll(".home-project-card");
-const projectsPrevBtn = document.querySelector(".home-project-nav.prev");
-const projectsNextBtn = document.querySelector(".home-project-nav.next");
 
-if (projectsTrack && projectsCards.length > 0) {
-  let projectsAutoInterval;
-
-  function autoSlideProjects() {
-    projectsTrack.scrollBy({
-      left: projectsCards[0].offsetWidth,
-      behavior: "smooth"
-    });
-  }
-
-  function startAutoSlide() {
-    projectsAutoInterval = setInterval(autoSlideProjects, 3000);
-  }
-
-  function resetAutoSlide() {
-    clearInterval(projectsAutoInterval);
-    startAutoSlide();
-  }
-
-  // Auto-slide on load
-  startAutoSlide();
-
-  // Reset interval on manual button click
-  if (projectsPrevBtn) {
-    projectsPrevBtn.addEventListener("click", resetAutoSlide);
-  }
-  if (projectsNextBtn) {
-    projectsNextBtn.addEventListener("click", resetAutoSlide);
-  }
-}
 
 /* ================= Our Process ================= */
 const steps = document.querySelectorAll(".process-step");
@@ -172,10 +137,58 @@ steps.forEach(step => stepObserver.observe(step));
 
   let event_currentIndex = 1;
 
-  function updateSlides() {
-    event_slides.forEach(slide => slide.classList.remove('active'));
-    event_slides[event_currentIndex].classList.add('active');
+ function updateSlides() {
+  event_slides.forEach(slide => slide.classList.remove('active'));
+  event_slides[event_currentIndex].classList.add('active');
+
+  /* Mobile slider movement */
+  if (window.innerWidth <= 768) {
+    const slider = document.querySelector('.home-press-event-slider');
+    slider.style.transform = `translateX(-${event_currentIndex * 100}%)`;
   }
+}
+
+/* ================= Touch Swipe Support (Mobile) ================= */
+
+const slider = document.querySelector('.home-press-event-slider');
+
+let startX = 0;
+let currentX = 0;
+let isDragging = false;
+
+slider.addEventListener('touchstart', (e) => {
+  if (window.innerWidth > 768) return;
+
+  startX = e.touches[0].clientX;
+  isDragging = true;
+});
+
+slider.addEventListener('touchmove', (e) => {
+  if (!isDragging || window.innerWidth > 768) return;
+
+  currentX = e.touches[0].clientX;
+});
+
+slider.addEventListener('touchend', () => {
+  if (!isDragging || window.innerWidth > 768) return;
+
+  const diff = startX - currentX;
+  const swipeThreshold = 50;
+
+  if (diff > swipeThreshold) {
+    // Swipe left → Next
+    event_currentIndex =
+      (event_currentIndex + 1) % event_slides.length;
+  } else if (diff < -swipeThreshold) {
+    // Swipe right → Prev
+    event_currentIndex =
+      (event_currentIndex - 1 + event_slides.length) % event_slides.length;
+  }
+
+  updateSlides();
+  isDragging = false;
+});
+
 
   nextBtn.addEventListener('click', () => {
     event_currentIndex = (event_currentIndex + 1) % event_slides.length;
@@ -187,8 +200,27 @@ steps.forEach(step => stepObserver.observe(step));
     updateSlides();
   });
 
+  /* 👉 Hover Behavior (NEW) */
+event_slides.forEach((slide, index) => {
+  slide.addEventListener('mouseenter', () => {
+    event_currentIndex = index;
+    updateSlides();
+  });
+});
+
   updateSlides();
 
 
+// ================= Floating Action ================= */
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("components/floating-actions.html")
+    .then(response => response.text())
+    .then(data => {
+      document.body.insertAdjacentHTML("beforeend", data);
+    });
+});
 
+function openCallbackForm() {
+  alert("Open Call Back Form");
+}
 

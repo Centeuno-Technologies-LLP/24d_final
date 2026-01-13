@@ -16,8 +16,8 @@
 
 /* Blur effect on scroll */
 .header.scrolled {
-  background: rgba(21, 21, 21, .3);
-  backdrop-filter: blur(0.5rem);
+  background: rgba(21, 21, 21, .6);
+  backdrop-filter: blur(0.6rem);
   box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.04);
 }
 

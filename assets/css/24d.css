@@ -171,19 +171,19 @@
 
 /* Card */
 .d24d-exclusive-list {
-  max-width: 1200px;
+  max-width: 95%;
   margin: 0 auto;
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .d24d-exclusive-card {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
-  gap: 3rem;
-  padding: 2.5rem;
+  gap: 2rem;
+  padding: 2.0rem;
   border: 1px solid #eee;
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
   align-items: center;
 }
 
@@ -219,11 +219,13 @@
   margin: 1rem;
   font-size: 0.9rem;
   color: #444;
+  list-style: none;
 }
 
 .d24d-exclusive-meta i {
   margin-right: 0.4rem;
   color: #c00;
+  
 }
 
 .d24d-exclusive-status {

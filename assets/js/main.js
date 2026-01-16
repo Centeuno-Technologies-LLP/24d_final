@@ -1,21 +1,20 @@
-/* ================= HEADER BLUR ON SCROLL ================= */
-const header = document.getElementById("siteHeader");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-  }
-});
-
-/* ================= MOBILE NAV ================= */
-const toggle = document.getElementById("navToggle");
-const navLinks = document.querySelectorAll(".nav-links");
+const toggle = document.getElementById("simpleToggle");
+const mobileMenu = document.getElementById("simpleMobileMenu");
+const closeBtn = document.getElementById("simpleClose");
 
 toggle.addEventListener("click", () => {
-  navLinks.forEach(nav => nav.classList.toggle("open"));
+  mobileMenu.classList.add("open");
+  toggle.classList.add("active");
+  document.body.style.overflow = "hidden";
 });
+
+closeBtn.addEventListener("click", () => {
+  mobileMenu.classList.remove("open");
+  toggle.classList.remove("active");
+  document.body.style.overflow = "";
+});
+
+
 
 /* ================= HERO CAROUSEL ================= */
 const slides = document.querySelectorAll(".carousel-slide");

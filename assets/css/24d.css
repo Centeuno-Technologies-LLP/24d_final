@@ -3,14 +3,14 @@
 =========================== */
 
 .exclusives-hero {
-    padding: 5rem 0 0 0;
+  padding: 5rem 0 0 0;
   background: #ffffff;
   overflow: hidden;
 }
 
 .exclusives-hero .container {
   max-width: 1200px;
-  margin: auto;
+  margin: 6rem auto;
 }
 
 /* Image Gallery */
@@ -116,6 +116,10 @@
     gap: 16px;
   }
 
+  .exclusives-hero .container {
+  
+  margin: 2rem auto;
+}
   .img-box.up,
   .img-box.down {
     transform: translateY(0);

@@ -24,43 +24,59 @@
 <body>
 
     <!-- ================= HEADER / NAVIGATION ================= -->
+    <header class="simple-header">
+        <div class="simple-nav">
 
-    <header class="header" id="siteHeader">
-        <nav class="nav container">
-
-            <!-- Left Navigation -->
-            <ul class="nav-links nav-left">
+            <!-- Left Menu -->
+            <ul class="simple-menu desktop-menu menu-left">
                 <li><a href="about.html">About</a></li>
                 <li><a href="project.html">Projects</a></li>
                 <li><a href="24-exclusive.html">24D Exclusive</a></li>
                 <li><a href="happy-customer.html">Happy Customers</a></li>
-                
             </ul>
 
-            <!-- Center Logo -->
-            <div class="logo">
-                <a href="index.html" aria-label="Luxury Estate Home">
-                    <img src="assets\images\logo.png" alt="Luxury Estate Logo">
+            <!-- Logo -->
+            <div class="simple-logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="24 Dimensions Group">
                 </a>
             </div>
 
-            <!-- Right Navigation -->
-            <ul class="nav-links nav-right">
+            <!-- Right Menu -->
+            <ul class="simple-menu desktop-menu menu-right">
+
                 <li><a href="press-events.html">Press & Events</a></li>
                 <li><a href="channel-partners.html">Channel Partners</a></li>
-                <li><a href="contact.html">Contact us</a></li>
-                <!-- <li><a href="contact.html" class="btn btn-outline">Request Call Back</a></li> -->
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
 
-            <!-- Mobile Menu Toggle -->
-            <div class="nav-toggle" id="navToggle">
+            <!-- Hamburger -->
+            <div class="simple-toggle" id="simpleToggle">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
 
-        </nav>
+        </div>
+
+
+        <!-- Mobile Menu -->
+        <div class="simple-mobile-menu" id="simpleMobileMenu">
+            <div class="simple-close" id="simpleClose">&times;</div>
+
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="24-exclusive.html">24D Exclusive</a></li>
+                <li><a href="happy-customer.html">Happy Customers</a></li>
+                <li><a href="press-events.html">Press & Events</a></li>
+                <li><a href="channel-partners.html">Channel Partners</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
     </header>
+
+
 
 
     <!-- ================= HERO CAROUSEL ================= -->
@@ -71,7 +87,9 @@
             <!-- Slide 1 -->
             <article class="carousel-slide active">
                 <video class="carousel-video" autoplay muted loop playsinline>
-                    <source src="https://res.cloudinary.com/luxuryp/videos/f_webm,vc_vp9,q_auto/c6qupgxkhztmnecvwhnr/carolwood_dec.webm" type="video/webm">
+                    <source
+                        src="https://res.cloudinary.com/luxuryp/videos/f_webm,vc_vp9,q_auto/c6qupgxkhztmnecvwhnr/carolwood_dec.webm"
+                        type="video/webm">
                 </video>
                 <div class="hero-content container animate">
                     <h1>Redefining Luxury Living</h1>
@@ -384,8 +402,7 @@
 
                 <!-- Project Slide -->
                 <article class="home-project-card">
-                    <img src="assets\images\Synergy-project-24Dimension.webp"
-                        alt="Luxury Project View">
+                    <img src="assets\images\Synergy-project-24Dimension.webp" alt="Luxury Project View">
 
                     <div class="home-project-info">
                         <h3>Synergy: Salisbury Park – 4.5 BHK Residences</h3>
@@ -431,8 +448,7 @@
 
                 <!-- Duplicate structure for remaining 3 projects -->
                 <article class="home-project-card">
-                    <img src="assets\images\Aloha-project-24Dimension.webp"
-                        alt="Luxury Project">
+                    <img src="assets\images\Aloha-project-24Dimension.webp" alt="Luxury Project">
                     <div class="home-project-info">
                         <h3>ALOHA – 2 BHK Flats in Wakad</h3>
                         <div class="home-project-meta">
@@ -475,8 +491,7 @@
                 </article>
 
                 <article class="home-project-card">
-                    <img src="assets\images\One-Residency-Project_24Dimensions.webp"
-                        alt="Luxury Project">
+                    <img src="assets\images\One-Residency-Project_24Dimensions.webp" alt="Luxury Project">
                     <div class="home-project-info">
                         <h3>ONE RESIDENCY – 1 & 2 BHK in Ambegaon</h3>
                         <div class="home-project-meta">
@@ -519,11 +534,12 @@
                 </article>
 
                 <article class="home-project-card">
-                    <img src="assets\images\Jairaj_hill-project-24Dimensions.webp"
-                        alt="Luxury Project">
+                    <img src="assets\images\Jairaj_hill-project-24Dimensions.webp" alt="Luxury Project">
                     <div class="home-project-info">
-                        
-                        <div class="trusted-developers-logo"><img src="https://jairajdevelopers.com/wp-content/uploads/2025/03/jairaj-png-logo-1.png" alt="Developer 1"></div>
+
+                        <div class="trusted-developers-logo"><img
+                                src="https://jairajdevelopers.com/wp-content/uploads/2025/03/jairaj-png-logo-1.png"
+                                alt="Developer 1"></div>
                         <div class="home-project-meta">
 
                             <div class="meta-item">
@@ -578,203 +594,215 @@
 
     </section>
 
-<!-- ================= Home Event ================= -->
+    <!-- ================= Home Event ================= -->
 
-<section class="home-press-event">
-  <div class="home-press-event-header">
-    <span class="home-press-event-label">EVENTS</span>
-    <h2>Trusted & Recognised</h2>
-  </div>
-
-  <div class="home-press-event-slider-wrapper">
-
-    <!-- Left Arrow -->
-    <button class="home-press-event-nav prev">
-      <i class="fa-solid fa-chevron-left"></i>
-    </button>
-
-    <!-- Slider -->
-    <div class="home-press-event-slider">
-
-      <!-- Slide 1 -->
-      <div class="home-press-event-slide">
-        <img src="https://www.cbnme.com/wp-content/uploads/2024/02/FSX-8807-2048x1365.jpg" alt="">
-        <div class="home-press-event-overlay">
-          <span class="home-press-event-tag">MEDIA</span>
-          <h3>Leadership Excellence 2025</h3>
+    <section class="home-press-event">
+        <div class="home-press-event-header">
+            <span class="home-press-event-label">EVENTS</span>
+            <h2>Trusted & Recognised</h2>
         </div>
-      </div>
 
-      <!-- Slide 2 (Default Center) -->
-      <div class="home-press-event-slide active">
-        <img src="assets\images\Event1-24Dimention.webp" alt="">
-        <div class="home-press-event-overlay">
-          <span class="home-press-event-tag">Business Inspiracon Awards 2024</span>
-          <h3>Honoured among India’s top businesses for performance and innovation.</h3>
-        </div>
-      </div>
+        <div class="home-press-event-slider-wrapper">
 
-      <!-- Slide 3 -->
-      <div class="home-press-event-slide">
-        <img src="https://www.cbnme.com/wp-content/uploads/2024/02/FSX-8798-2048x1365.jpg" alt="">
-        <div class="home-press-event-overlay">
-          <span class="home-press-event-tag">MEDIA</span>
-          <h3>Iconic Real Estate 2025</h3>
-        </div>
-      </div>
+            <!-- Left Arrow -->
+            <button class="home-press-event-nav prev">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
 
-    </div>
+            <!-- Slider -->
+            <div class="home-press-event-slider">
 
-    <!-- Right Arrow -->
-    <button class="home-press-event-nav next">
-      <i class="fa-solid fa-chevron-right"></i>
-    </button>
-
-  </div>
-</section>
-
-
-<!-- ================= Developer Section ================= -->
-<!-- Trusted Developers Section -->
-<section class="trusted-developers">
-  <div class="trusted-developers-container">
-
-    <h2 class="trusted-developers-title">
-      Trusted Developers
-    </h2>
-
-    <div class="trusted-developers-carousel">
-      <div class="trusted-developers-track">
-        <!-- Logos (repeat once for seamless loop) -->
-        <div class="trusted-developers-logo"><img src="https://jairajdevelopers.com/wp-content/uploads/2025/03/jairaj-png-logo-1.png" alt="Developer 1"></div>
-        <div class="trusted-developers-logo"><img src="https://www.kohinoorpune.com/resources/assets/frontcss/images/logo.svg" alt="Developer 2"></div>
-        <div class="trusted-developers-logo"><img src="https://sharadagroup.com/sharada/images/SHARADA%20LOGO%20MAIN.png" alt="Developer 3"></div>
-        <div class="trusted-developers-logo"><img src="http://127.0.0.1:5501/real-estate-website/public/src/assets/logo.png" alt="Developer 4"></div>
-        <div class="trusted-developers-logo"><img src="https://ravirajrealty.com/demo/wp-content/uploads/2023/01/raviraj-realty-we-build-benchmarks.png" alt="Developer 5"></div>
-        <div class="trusted-developers-logo"><img src="https://jairajdevelopers.com/wp-content/uploads/2025/03/jairaj-png-logo-1.png" alt="Developer 6"></div>
-        <div class="trusted-developers-logo"><img src="http://127.0.0.1:5501/real-estate-website/public/src/assets/logo.png" alt="Developer 7"></div>
-        <div class="trusted-developers-logo"><img src="http://127.0.0.1:5501/real-estate-website/public/src/assets/logo.png" alt="Developer 8"></div>
-
-        <!-- Duplicate for infinite effect -->
-        <div class="trusted-developers-logo"><img src="assets/img/dev-1.png" alt=""></div>
-        <div class="trusted-developers-logo"><img src="assets/img/dev-2.png" alt=""></div>
-        <div class="trusted-developers-logo"><img src="assets/img/dev-3.png" alt=""></div>
-        <div class="trusted-developers-logo"><img src="assets/img/dev-4.png" alt=""></div>
-        <div class="trusted-developers-logo"><img src="assets/img/dev-5.png" alt=""></div>
-        <div class="trusted-developers-logo"><img src="assets/img/dev-6.png" alt=""></div>
-        <div class="trusted-developers-logo"><img src="assets/img/dev-7.png" alt=""></div>
-        <div class="trusted-developers-logo"><img src="assets/img/dev-8.png" alt=""></div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<section class="cta-strip">
-            <div class="container cta-grid">
-
-                <!-- LEFT CONTENT -->
-                <div class="cta-content">
-                    <h2>Have a Project to Launch or Sell?</h2>
-
-                    <p>
-                        Whether you’re planning a new launch, relaunching a slow-moving project
-                        or exploring mandate options, we’d be happy to walk you through how
-                        24 Dimensions can help.
-                    </p>
-
-                    <!-- SOCIAL ICONS -->
-                    <div class="cta-socials">
-                        <a href="#" class="social facebook" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social instagram" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social linkedin" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
+                <!-- Slide 1 -->
+                <div class="home-press-event-slide">
+                    <img src="https://www.cbnme.com/wp-content/uploads/2024/02/FSX-8807-2048x1365.jpg" alt="">
+                    <div class="home-press-event-overlay">
+                        <span class="home-press-event-tag">MEDIA</span>
+                        <h3>Leadership Excellence 2025</h3>
                     </div>
-
-
-                    <!-- CONTACT INFO -->
-                    <div class="cta-contact">
-                        <div class="contact-item">
-                            <i class="fa-regular fa-envelope"></i>
-                            <a href="mailto:hello@24dimensions.com">
-                                hello@24dimensions.com
-                            </a>
-                        </div>
-
-                        <div class="contact-item">
-                            <i class="fa-solid fa-phone"></i>
-                            <a href="tel:+917991242424">
-                                +91 79912 42424
-                            </a>
-                        </div>
-                    </div>
-
                 </div>
 
-                <!-- RIGHT FORM -->
-                <div class="cta-form-wrapper">
-                    <form class="global-form">
-                        <h3>Schedule a Consultation</h3>
+                <!-- Slide 2 (Default Center) -->
+                <div class="home-press-event-slide active">
+                    <img src="assets\images\Event1-24Dimention.webp" alt="">
+                    <div class="home-press-event-overlay">
+                        <span class="home-press-event-tag">Business Inspiracon Awards 2024</span>
+                        <h3>Honoured among India’s top businesses for performance and innovation.</h3>
+                    </div>
+                </div>
 
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <input type="email" placeholder="Email Address" required>
-                        </div>
-
-                        <div class="form-group">
-                            <input type="tel" placeholder="Contact Number" required>
-                        </div>
-
-                        <button type="submit" class="cta-button full">
-                            Request Callback
-                        </button>
-                    </form>
+                <!-- Slide 3 -->
+                <div class="home-press-event-slide">
+                    <img src="https://www.cbnme.com/wp-content/uploads/2024/02/FSX-8798-2048x1365.jpg" alt="">
+                    <div class="home-press-event-overlay">
+                        <span class="home-press-event-tag">MEDIA</span>
+                        <h3>Iconic Real Estate 2025</h3>
+                    </div>
                 </div>
 
             </div>
-        </section>
-<footer class="footer">
-  <div class="container footer-content">
-    <div class="footer-left">
-      © 2025 24 Dimensions. All Rights Reserved.
+
+            <!-- Right Arrow -->
+            <button class="home-press-event-nav next">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+        </div>
+    </section>
+
+
+    <!-- ================= Developer Section ================= -->
+    <!-- Trusted Developers Section -->
+    <section class="trusted-developers">
+        <div class="trusted-developers-container">
+
+            <h2 class="trusted-developers-title">
+                Trusted Developers
+            </h2>
+
+            <div class="trusted-developers-carousel">
+                <div class="trusted-developers-track">
+                    <!-- Logos (repeat once for seamless loop) -->
+                    <div class="trusted-developers-logo"><img
+                            src="https://jairajdevelopers.com/wp-content/uploads/2025/03/jairaj-png-logo-1.png"
+                            alt="Developer 1"></div>
+                    <div class="trusted-developers-logo"><img
+                            src="https://www.kohinoorpune.com/resources/assets/frontcss/images/logo.svg"
+                            alt="Developer 2"></div>
+                    <div class="trusted-developers-logo"><img
+                            src="https://sharadagroup.com/sharada/images/SHARADA%20LOGO%20MAIN.png" alt="Developer 3">
+                    </div>
+                    <div class="trusted-developers-logo"><img
+                            src="http://127.0.0.1:5501/real-estate-website/public/src/assets/logo.png"
+                            alt="Developer 4"></div>
+                    <div class="trusted-developers-logo"><img
+                            src="https://ravirajrealty.com/demo/wp-content/uploads/2023/01/raviraj-realty-we-build-benchmarks.png"
+                            alt="Developer 5"></div>
+                    <div class="trusted-developers-logo"><img
+                            src="https://jairajdevelopers.com/wp-content/uploads/2025/03/jairaj-png-logo-1.png"
+                            alt="Developer 6"></div>
+                    <div class="trusted-developers-logo"><img
+                            src="http://127.0.0.1:5501/real-estate-website/public/src/assets/logo.png"
+                            alt="Developer 7"></div>
+                    <div class="trusted-developers-logo"><img
+                            src="http://127.0.0.1:5501/real-estate-website/public/src/assets/logo.png"
+                            alt="Developer 8"></div>
+
+                    <!-- Duplicate for infinite effect -->
+                    <div class="trusted-developers-logo"><img src="assets/img/dev-1.png" alt=""></div>
+                    <div class="trusted-developers-logo"><img src="assets/img/dev-2.png" alt=""></div>
+                    <div class="trusted-developers-logo"><img src="assets/img/dev-3.png" alt=""></div>
+                    <div class="trusted-developers-logo"><img src="assets/img/dev-4.png" alt=""></div>
+                    <div class="trusted-developers-logo"><img src="assets/img/dev-5.png" alt=""></div>
+                    <div class="trusted-developers-logo"><img src="assets/img/dev-6.png" alt=""></div>
+                    <div class="trusted-developers-logo"><img src="assets/img/dev-7.png" alt=""></div>
+                    <div class="trusted-developers-logo"><img src="assets/img/dev-8.png" alt=""></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <section class="cta-strip">
+        <div class="container cta-grid">
+
+            <!-- LEFT CONTENT -->
+            <div class="cta-content">
+                <h2>Have a Project to Launch or Sell?</h2>
+
+                <p>
+                    Whether you’re planning a new launch, relaunching a slow-moving project
+                    or exploring mandate options, we’d be happy to walk you through how
+                    24 Dimensions can help.
+                </p>
+
+                <!-- SOCIAL ICONS -->
+                <div class="cta-socials">
+                    <a href="#" class="social facebook" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social instagram" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social linkedin" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+
+
+                <!-- CONTACT INFO -->
+                <div class="cta-contact">
+                    <div class="contact-item">
+                        <i class="fa-regular fa-envelope"></i>
+                        <a href="mailto:hello@24dimensions.com">
+                            hello@24dimensions.com
+                        </a>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+917991242424">
+                            +91 79912 42424
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT FORM -->
+            <div class="cta-form-wrapper">
+                <form class="global-form">
+                    <h3>Schedule a Consultation</h3>
+
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="tel" placeholder="Contact Number" required>
+                    </div>
+
+                    <button type="submit" class="cta-button full">
+                        Request Callback
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                © 2025 24 Dimensions. All Rights Reserved.
+            </div>
+
+            <div class="footer-right">
+                <a href="/privacy-policy">Privacy Policy</a>
+                <span class="divider">|</span>
+                <a href="/sitemap">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+
+    <div class="floating-actions">
+
+        <button class="floating-btn call-back-btn" onclick="openCallbackForm()">
+            <i class="fas fa-phone"></i>
+            <span>Call Back</span>
+        </button>
+
+        <a href="https://wa.me/919999999999" target="_blank" class="floating-btn whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+
     </div>
-
-    <div class="footer-right">
-      <a href="/privacy-policy">Privacy Policy</a>
-      <span class="divider">|</span>
-      <a href="/sitemap">Sitemap</a>
-    </div>
-  </div>
-</footer>
-
-<!-- Floating Action Button -->
-
-<div class="floating-actions">
-
-  <button class="floating-btn call-back-btn" onclick="openCallbackForm()">
-    <i class="fas fa-phone"></i>
-    <span>Call Back</span>
-  </button>
-
-  <a
-    href="https://wa.me/919999999999"
-    target="_blank"
-    class="floating-btn whatsapp-btn"
-  >
-    <i class="fab fa-whatsapp"></i>
-    <span>WhatsApp</span>
-  </a>
-
-</div>
 
     <!-- ================= JAVASCRIPT ================= -->
     <script src="assets/js/main.js"></script>
